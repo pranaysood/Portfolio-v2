@@ -1,95 +1,108 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import LLM from "../../Assets/Projects/LLM.png";
+import Portfolio from "../../Assets/Projects/Portfolio.gif";
+import SoftwareEngg from "../../Assets/Projects/SoftwareEngg.png";
+import Realtime from "../../Assets/Projects/RealTime.png";
+import Dss from "../../Assets/Projects/jettyrun.gif";
+import styled from "styled-components";
+
+const ProjectSection = styled(Container)`
+  padding-top: 100px;
+`;
+
+const ProjectHeading = styled.h1`
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+
+  .purple {
+    color: #000;
+  }
+`;
+
+const ProjectCardWrapper = styled(Row)`
+  justify-content: center;
+  padding-bottom: 10px;
+`;
+
+const ProjectCol = styled(Col)`
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+`;
 
 function Projects() {
   return (
-    <Container fluid className="project-section">
-      <Particle />
+    <ProjectSection fluid className="project-section">
       <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
-        </h1>
-        <p style={{ color: "white" }}>
+        <ProjectHeading className="project-heading">
+          Showcasing <strong className="purple">My Projects</strong>
+        </ProjectHeading>
+        <p
+          style={{ color: "white", textAlign: "center", marginBottom: "30px" }}
+        >
           Here are a few projects I've worked on recently.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+        <ProjectCardWrapper>
+          <ProjectCol md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={LLM}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Zero Shot Learning using LLM"
+              description="This research project, conducted under the supervision of Dr. Yan Liu, investigates the application of large language models (LLMs) for root cause analysis in microservice environments. Utilizing the PetShop Dataset, it aims to identify both the root cause node and the target node of anomalies in a microservices architecture without prior specific training."
+              ghLink="https://github.com/pranaysood/Root-Cause-Analysis"
+              demoLink="" // Add your demo link here
             />
-          </Col>
+          </ProjectCol>
 
-          <Col md={4} className="project-card">
+          <ProjectCol md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={Portfolio}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Portfolio Website"
+              description="This is a personal portfolio website. Built using React.js, this project incorporates multiple pages, each featuring dynamic animations and smooth transitions to enhance user interaction and visual appeal. The site is structured to display various sections, including a home page, project portfolio, about section, and contact information."
+              ghLink="https://github.com/pranaysood/Portfolio-2024"
+              demoLink="" // Add your demo link here
             />
-          </Col>
+          </ProjectCol>
 
-          <Col md={4} className="project-card">
+          <ProjectCol md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={SoftwareEngg}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Trending News Social Application"
+              description="This project focuses on creating a social application for sharing and discussing trending news. The application integrates real-time news updates and provides a platform for users to engage with news content through comments and shares. Designed to handle high traffic and provide a smooth user experience."
+              ghLink="" // Add your GitHub link here
+              demoLink="" // Add your demo link here
             />
-          </Col>
+          </ProjectCol>
 
-          <Col md={4} className="project-card">
+          <ProjectCol md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={Realtime}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Real-time Multimedia Application"
+              description="This project explores the development of a real-time multimedia application, focusing on the seamless integration of various media types such as video, audio, and text. The application provides an interactive and engaging user experience, with real-time data processing and streaming capabilities."
+              ghLink="" // Add your GitHub link here
+              demoLink="" // Add your demo link here
             />
-          </Col>
+          </ProjectCol>
 
-          <Col md={4} className="project-card">
+          <ProjectCol md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={Dss}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Distributed Software Systems"
+              description="This project involves designing and implementing distributed software systems that ensure reliability, scalability, and efficiency. It includes creating algorithms for distributed data processing and understanding the challenges associated with distributed computing, such as data consistency and fault tolerance."
+              ghLink="" // Add your GitHub link here
+              demoLink="" // Add your demo link here
             />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
-        </Row>
+          </ProjectCol>
+        </ProjectCardWrapper>
       </Container>
-    </Container>
+    </ProjectSection>
   );
 }
 

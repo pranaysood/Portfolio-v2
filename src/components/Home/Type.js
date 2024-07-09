@@ -1,21 +1,27 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import "./Type.css"; // Import the CSS file for styling
 
 function Type() {
+  const typewriterStrings = [
+    "Software Engineer",
+    "Software Developer",
+    "Cloud Engineer",
+    "Graduate Student",
+  ];
+
   return (
-    <Typewriter
-      options={{
-        strings: [
-          "Software Developer",
-          "Freelancer",
-          "MERN Stack Developer",
-          "Open Source Contributor",
-        ],
-        autoStart: true,
-        loop: true,
-        deleteSpeed: 50,
-      }}
-    />
+    <div className="typewriter-container">
+      <Typewriter
+        options={{
+          strings: typewriterStrings,
+          autoStart: true,
+          loop: true,
+          deleteSpeed: 20,
+          delay: 90,
+        }}
+      />
+    </div>
   );
 }
 
