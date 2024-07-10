@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Card, Form, Button, Alert } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
-import emailjs from "emailjs-com";
 import AOS from "aos";
 import "aos/dist/aos.css"; // AOS styles
 
@@ -46,19 +45,9 @@ function Contact() {
     AOS.init({ duration: 1200, once: true });
   }, []);
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm("your_service_id", "your_template_id", e.target, "your_user_id")
-      .then(
-        (result) => {
-          console.log(result.text);
-          setSubmitted(true);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    setSubmitted(true);
   };
 
   return (
@@ -67,7 +56,7 @@ function Contact() {
         <Card.Body>
           <Card.Title className="text-center mb-4">Get In Touch</Card.Title>
           {!submitted ? (
-            <Form onSubmit={sendEmail}>
+            <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formName">
                 <Form.Label>Name</Form.Label>
                 <Form.Control
