@@ -3,7 +3,6 @@ import { Container, Row, Col, Card, ProgressBar } from "react-bootstrap";
 import myImg from "../../Assets/avatar-1.jpg";
 import Tilt from "react-parallax-tilt";
 import Type from "./Type";
-import ParticleBackground from "../ParticleBackground"; // Correct path for ParticleBackground
 import AOS from "aos";
 import "aos/dist/aos.css"; // AOS styles
 import CountUp from "react-countup";
@@ -75,20 +74,11 @@ function Home2() {
     textAlign: "center",
   };
 
-  const gradientTextStyle = {
-    background: "#abb1b3",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    fontSize: "3rem",
-    fontWeight: "bold",
-  };
-
   return (
     <div
       className="home-center"
       style={{ position: "relative", overflow: "hidden" }}
     >
-      <ParticleBackground /> {/* Add ParticleBackground component */}
       <Container
         fluid
         className="home-container"

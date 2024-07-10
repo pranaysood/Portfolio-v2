@@ -9,7 +9,6 @@ import {
   DiCss3,
   DiReact,
   DiNodejs,
-  DiMongodb,
   DiDocker,
   DiAws,
 } from "react-icons/di";

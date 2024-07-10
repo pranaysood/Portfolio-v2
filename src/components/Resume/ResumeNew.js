@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
-import Particle from "../Particle";
 import styled, { keyframes } from "styled-components";
 import { Worker, Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
@@ -52,7 +51,6 @@ function ResumeNew() {
   return (
     <div>
       <StyledContainer fluid className="resume-section">
-        <Particle interactive={true} numParticles={200} linkDistance={150} />
         <div className="text-center mt-5">
           <StyledButton
             variant="primary"

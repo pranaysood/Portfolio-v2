@@ -79,7 +79,7 @@ function Footer() {
               <FaLinkedinIn size="30px" />
             </SocialIcon>
             <SocialIcon
-              href="https://instagram.com/pranaysood"
+              href="https://www.instagram.com/pranaysood_?igsh=MTh0eXdrZmg2bjQzeA%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
             >
